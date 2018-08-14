@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 echo "Installing UNIX ODBC and MSODBC."
-curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
+curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
 curl https://packages.microsoft.com/config/ubuntu/14.04/prod.list | sudo tee --append /etc/apt/sources.list.d/mssql-release.list
 sudo ACCEPT_EULA=Y apt install unixodbc-dev msodbcsql17 -y
 
