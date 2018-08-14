@@ -11,6 +11,7 @@ sudo ACCEPT_EULA=Y apt-get install msodbcsql17 -y > /dev/null
 # check (TODO):  php -m | grep -w 'pdo_sqlsrv' <OR> 'pdo_sqlsrsv'
 
 echo "Installing PHP Microsoft SQL extensions."
+sudo pecl channel-update pecl.php.net
 sudo pecl install sqlsrv pdo_sqlsrv
 
 sudo bash -c "echo extension=sqlsrv.so > /etc/php/7.2/fpm/conf.d/sqlsrv.ini"
