@@ -20,6 +20,8 @@ sudo pecl install sqlsrv pdo_sqlsrv > /dev/null
 sudo bash -c "echo extension=sqlsrv.so > /etc/php/7.2/fpm/conf.d/sqlsrv.ini"
 sudo bash -c "echo extension=pdo_sqlsrv.so > /etc/php/7.2/fpm/conf.d/pdo_sqlsrv.ini"
 
+sudo service php7.2-fpm restart > /dev/null
+
 echo "-----"
 echo "Finished. Please add the following to your php.ini file:"
 echo "extension=sqlsrv.so"
